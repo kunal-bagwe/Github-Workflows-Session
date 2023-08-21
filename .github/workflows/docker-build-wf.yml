@@ -54,4 +54,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: nginx-sample:latest
+          tags: kunalbagwe/nginx-github-actions:latest
