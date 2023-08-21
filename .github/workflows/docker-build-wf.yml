@@ -37,5 +37,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+      
       - name: Build Docker Image
-        run: docker build . --file Dockerfile --tag sample-image:v1
+        run: docker build . --tag sample-image:v1
