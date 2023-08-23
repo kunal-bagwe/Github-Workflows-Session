@@ -38,7 +38,7 @@ jobs:
   build:
 
     # if condition to check github events to execute job
-    if: contains(fromJSON('["pull_request"]'), github.event_name)
+#    if: contains(fromJSON('["pull_request"]'), github.event_name)
     
     runs-on: ubuntu-latest
     env:
