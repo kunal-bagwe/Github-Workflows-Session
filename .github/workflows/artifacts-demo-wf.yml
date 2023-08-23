@@ -36,7 +36,7 @@ jobs:
           path: downloads
       - name: Get Output of file from artifact
         run: |
-          ls
+          cd downloads
           cat alpha.html
           cat bravo.html
           cat charlie.html    
