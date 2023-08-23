@@ -6,6 +6,7 @@ on:
     branches: [ github-actions-demo ]
 
 jobs:
+  # Job 1
   archive-build-artifacts:
     runs-on: ubuntu-latest
     steps:
@@ -25,15 +26,17 @@ jobs:
         with: 
           name: assets-for-download
           path: downloads
+  # Job 2        
   download_artifact:
     runs-on: ubuntu-latest
+    
+    # Current job dependent on "archive-build-artifacts" job to download artifacts
     needs: archive-build-artifacts
     steps:
       - name: Download Artifact using GitHub Action
         uses: actions/download-artifact@v2
         with: 
           name: assets-for-download
-          path: downloads
       - name: Get Output of file from artifact
         run: |
           cd downloads
