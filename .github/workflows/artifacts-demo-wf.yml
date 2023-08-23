@@ -2,9 +2,10 @@
 name: Publish GitHub Actions Artifacts Example
 
 on:
+  workflow_dispatch:
   push:
     branches: [ github-actions-demo ]
-  workflow_dispatch:
+  
 jobs:
   # Job 1
   archive-build-artifacts:
