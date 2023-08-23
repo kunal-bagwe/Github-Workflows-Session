@@ -9,10 +9,9 @@ jobs:
        
   archive-build-artifacts:
     runs-on: ubuntu-latest
+    env:
+      GITHUB_ID: ${{ github.run_id }}
     steps:
-      env:
-        GITHUB_ID: ${{ github.run_id }}
-
       - name: Step 1 - Create a temporary artifact downloads folder
         run: mkdir downloads
         
