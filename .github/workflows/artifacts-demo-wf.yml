@@ -10,6 +10,8 @@ jobs:
   archive-build-artifacts:
     runs-on: ubuntu-latest
     steps:
+      env:
+        GITHUB_ID: ${{ github.run_id }}
 
       - name: Step 1 - Create a temporary artifact downloads folder
         run: mkdir downloads
@@ -20,6 +22,7 @@ jobs:
           echo 'alpha'    > alpha.html
           echo 'bravo'    > bravo.html
           echo 'charlie'  > charlie.html
+          echo '${{ GITHUB_ID }}' > GITHUB.txt
           cd ..
     
       - name: Step 3 - Use the Upload Artifact GitHub Action
