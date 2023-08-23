@@ -18,7 +18,7 @@ jobs:
           cd downloads
           echo 'alpha'    > alpha.html
           echo 'bravo'    > bravo.html
-          echo 'charlie'  > charlie.html
+          echo 'charlie test'  > charlie.html
           cd ..
     
       - name: Step 3 - Use the Upload Artifact GitHub Action
