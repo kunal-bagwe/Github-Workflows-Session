@@ -25,3 +25,16 @@ jobs:
         with: 
           name: assets-for-download
           path: downloads
+  download_artifact:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step 4 - Download Artifact using GitHub Action
+        uses: actions/download-artifact@v2
+        with: 
+          name: assets-for-download
+          path: downloads
+      - name: Get Output of file from artifact
+        run: |
+          cat alpha.html
+          cat bravo.html
+          cat charlie.html    
