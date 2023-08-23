@@ -37,6 +37,7 @@ jobs:
         uses: actions/download-artifact@v2
         with: 
           name: assets-for-download
+          path: downloads
       - name: Get Output of file from artifact
         run: |
           cd downloads
